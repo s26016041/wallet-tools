@@ -3,9 +3,12 @@
   "main": "main.js",
   "version": "1.0.0",
   "devDependencies": {
-    "electron": "^30.0.2"
+    "electron": "^30.0.2",
+    "electron-packager": "^17.1.2"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "electron-packager . wallet-tool --platform=win32 --arch=x64 --electron-version=9.4.4 --overwrite"
   }
+  
 }
