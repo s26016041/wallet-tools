@@ -1,6 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path');
-const  { setTitle } = require('./src/renderer/pages/title');
+const  { setTitle } = require('./src/components/title');
 
 
 const createWindow = () => {
