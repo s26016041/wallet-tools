@@ -1,6 +1,6 @@
 {
   "description": "",
-  "main": "main.js",
+  "main": "./src/main/main.js",
   "version": "1.0.0",
   "devDependencies": {
     "electron": "^30.0.2",

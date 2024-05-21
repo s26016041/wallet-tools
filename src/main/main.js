@@ -1,6 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path');
-const  { setTitle } = require('./src/components/title');
 
 
 const createWindow = () => {
@@ -8,12 +7,11 @@ const createWindow = () => {
     width: 1024,
     height: 768,
     autoHideMenuBar: true,
-    icon:path.join(__dirname,'resources','icon.png')  
+    icon: path.resolve(__dirname, '../../resources/icon.png') 
     
   })
-
-  setTitle(`錢包工具`,app.getVersion());
-  win.loadFile('index.html')
+  win.setTitle(`錢包工具 ${app.getVersion()}`)
+  win.loadFile('src/renderer/index.html')
 }
 
 app.whenReady().then(() => {
