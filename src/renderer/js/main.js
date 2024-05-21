@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 加载组件
-    loadComponent('components/header.html', 'header-container');
+
     loadComponent('components/footer.html', 'footer-container');
 });
 
