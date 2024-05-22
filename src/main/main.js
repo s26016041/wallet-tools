@@ -1,6 +1,9 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path');
 
+const { updateElectronApp, UpdateSourceType } = require('update-electron-app')
+updateElectronApp()
+
 
 const createWindow = () => {
   let win = new BrowserWindow({
@@ -10,6 +13,7 @@ const createWindow = () => {
     icon: path.resolve(__dirname, '../../resources/icon.png') 
     
   })
+
   win.setTitle(`錢包工具 ${app.getVersion()}`)
   win.loadFile('src/renderer/index.html')
 }
@@ -23,7 +27,6 @@ app.whenReady().then(() => {
     }
   })
 })
-
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()

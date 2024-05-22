@@ -1,13 +1,43 @@
 {
-  "description": "",
+  "description": "This is a wallet tool",
+  "name": "wallet-tools",
   "main": "./src/main/main.js",
-  "version": "1.0.0",
+  "author": "FredFox",
+  "version": "1.1.0",
   "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron-forge/publisher-github": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
     "electron": "^30.0.2",
     "electron-packager": "^17.1.2"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s26016041/wallet-tools.git"
+  },
+  "electron": {
+    "splashscreen": {
+      "backgroundColor": "#000000",
+      "width": 400,
+      "height": 300,
+      "autoHide": true,
+      "show": false 
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "update-electron-app": "^3.0.0"
   }
-  
 }
