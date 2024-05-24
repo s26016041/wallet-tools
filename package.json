@@ -29,14 +29,13 @@
   },
   "electron": {
     "splashscreen": {
-      "backgroundColor": "#000000",
-      "width": 400,
-      "height": 300,
       "autoHide": true,
-      "show": false 
+      "show": false
     }
   },
   "dependencies": {
+    "@material/drawer": "^14.0.0",
+    "@material/top-app-bar": "^14.0.0",
     "electron-squirrel-startup": "^1.0.1",
     "update-electron-app": "^3.0.0"
   }

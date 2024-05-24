@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-</head>
+  <title>Electron Navigation Drawer</title>
+  <link rel="stylesheet" type="text/css" href="./css/navigationDrawer.css">
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('#drawer > a');
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          const sublist = item.nextElementSibling;
+          if (sublist && sublist.tagName === 'UL') {
+            sublist.classList.toggle('show');
+            item.classList.toggle('expanded');
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
-
-  <div id="app">
-    <div id="footer-container"></div>
+  <div id="drawer">
+    <a href="#">Item 1</a>
+    <ul class="submenu">
+      <li><a href="#">Subitem 1.1</a></li>
+      <li><a href="#">Subitem 1.2</a></li>
+      <li><a href="#">Subitem 1.3</a></li>
+    </ul>
+    <a href="#">Item 2</a>
+    <ul class="submenu">
+      <li><a href="#">Subitem 2.1</a></li>
+      <li><a href="#">Subitem 2.2</a></li>
+    </ul>
+    <a href="#">Item 3</a>
   </div>
-
-
-  <script src="js/main.js"></script>
+  <div id="main-content">
+    <h1>Welcome to your Electron App</h1>
+  </div>
 </body>
 </html>

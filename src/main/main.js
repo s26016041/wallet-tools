@@ -7,7 +7,7 @@ updateElectronApp()
 
 const createWindow = () => {
   let win = new BrowserWindow({
-    width: 1024,
+    width: 1280,
     height: 768,
     autoHideMenuBar: true,
     icon: path.resolve(__dirname, '../../resources/icon.png') 
